@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 40px;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    label {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      background-color: #f7f7f7;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    input[type="radio"]:checked + label {
+      background-color: #337ab7;
+      color: #fff;
+    }
+
+    label:hover {
+      background-color: #e3e3e3;
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #337ab7;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #286090;
+    }
+
+    h2 {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Rock Paper Scissors</h1>
+  {% if messages %}
+    {% for message in messages %}
+      <h2>{{ message }}</h2>
+    {% endfor %}
+  {% endif %}
+  <form action="{% url 'home' %}" method="post">
+    {% csrf_token %}
+    <input type="radio" name="user" value="Rock" id="rock">
+    <label for="rock">Rock</label>
+    <input type="radio" name="user" value="Paper" id="paper">
+    <label for="paper">Paper</label>
+    <input type="radio" name="user" value="Scissors" id="scissors">
+    <label for="scissors">Scissors</label>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
+
