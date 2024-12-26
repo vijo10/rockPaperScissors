@@ -21,7 +21,7 @@ Make sure you have the following installed on your system:
 
 2. Navigate to the project directory:
    ```bash
-   cd rockPaperScissors
+   cd rock_paper_scissors
 
 3. Create a virtual environment (optional but recommended):
    ```bash
