@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'rockPapperSciccors.urls'
+ROOT_URLCONF = 'rock_papper_sciccors.urls'
 
 TEMPLATES = [
     {
@@ -67,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'rockPapperSciccors.wsgi.application'
+WSGI_APPLICATION = 'rock_papper_sciccors.wsgi.application'
 
 
 # Database
